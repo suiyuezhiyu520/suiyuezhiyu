@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+<div class="container">
+    <div class="mmp_header">
+        <div class="header_back">
+            <a href="#" class="icon-back">
+
+            </a>
+        </div>
+        <div class="down">
+            <img src="images/header_app.png" alt="">
+        </div>
+        <h1>省钱控 - 最新优惠</h1>
+
+    </div>
+</div>
+
+<div class="product_list">
+    <ul>
+        <script type="text/template" id="temp_moneyctrl">
+            {{ each list as v }}
+            <li class="clearfix" productId="{{ v.productId }}">
+                <a href="#">
+                    <div class="p_pic">
+                        {{ #v.productImg2 }}
+                    </div>
+                    <div class="p_text">
+                        <div class="title">
+                            {{ v.productName }}
+                            <span>{{ v.productPinkage }}</span>
+                        </div>
+                        <div class="info clearfix">
+                            <span>{{ v.productFrom }} | {{ v.productTime }}</span>
+                            <span>
+                                <i class="i-common"></i>
+                                {{ v.productComCount }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{ /each }}
+        </script>
+    </ul>
+</div>
+
+<div class="page_ctr clearfix">
+    <span class="pre"><a href="#">上一页</a></span>
+        <span class="page">
+            <!--<input type="text" list="pages">-->
+            <select id="pages">
+                <option value="1">1/12</option>
+                <option value="2">2/12</option>
+                <option value="3">3/12</option>
+                <option value="4">4/12</option>
+                <option value="5">5/12</option>
+                <option value="6">6/12</option>
+                <option value="7">7/12</option>
+                <option value="8">8/12</option>
+                <option value="9">9/12</option>
+            </select>
+        </span>
+    <span class="next"><a href="#">下一页</a></span>
+</div>
+<div class="mon_footer"></div>
+
+</body>
+</html>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/moneyctrl.js"></script>

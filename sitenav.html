@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+
+<div class="mmp_header">
+    <div class="header_back">
+        <a href="#" class="icon-back">
+
+        </a>
+    </div>
+    <div class="down">
+        <img src="images/header_app.png" alt="">
+    </div>
+    <h1> 商场导航</h1>
+</div>
+
+
+<div class="sitinav">
+    <div class="nav clearfix">
+        <a href="#">
+            <img src="" alt="">
+            京东商城
+        </a>
+    </div>
+</div>
+
+<div class="mon_footer"></div>
+
+</body>
+</html>
+
+<script type="text/template" id="temp_sitenav">
+    {{ each list as v}}
+    <a href="{{ v.navHref }}" navId="{{ v.navId }}">
+        <img src="{{ v.navImg }}" alt="">
+        {{ v.navTitle }}
+    </a>
+    {{ /each }}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/sitenav.js"></script>

@@ -1,0 +1,86 @@
+@import "adapter";
+@import "common/mon";
+.mon_header();
+.mon_footer();
+
+.mmp_search {
+  height:50/50rem;
+  background-color: #fff;
+  line-height: 80%;
+  position: relative;
+  padding-left: 10/50rem;
+
+  input {
+    border:none;
+  }
+  .text {
+    width:643/50rem;
+    height:60/2/50rem;
+    background-color: #F1F1F1;
+    border-radius: 30/50rem;
+    outline: none;
+    padding:0 100/50rem 0 0;
+    text-indent: 18/50rem;
+  }
+
+  .searchbtn {
+    width:127/2/50rem;
+    height:60/2/50rem;
+    border-radius: 30/50rem;
+    background-color: #FF841D;
+    color: #FFFFFF;
+    position: absolute;
+    right:10/50rem;
+    top:10/50rem;
+    font-size: 16/50rem;
+  }
+}
+
+.category_title {
+  background-color: #ededed;
+  border-radius: 4/50rem;
+  border:1px solid #ccc;
+  > li {
+  >  a {
+      display: block;
+      height:40/50rem;
+      font-size: 16/50rem;
+      line-height:40/50rem;
+      font-weight: bold;
+      text-indent: 16/50rem;
+      border-bottom: 1px solid #ccc;
+      background: url("http://www.zuyushop.com/wap/images/arrow1.gif") right center no-repeat;
+    }
+  }
+}
+
+.category {
+  background-color: #f9f9f9;
+  display: none;
+  li {
+    box-sizing: border-box;
+    float: left;
+    width:33.33%;
+    height:40/50rem;
+    line-height: 40/50rem;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+
+    &:nth-child(3n){
+      border-right:1px solid #ccc;
+    }
+    &:last-child {
+      border-right:1px solid #ccc;
+    }
+    a {
+      display: block;
+      text-align: center;
+      font-size: 16/50rem;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+<div class="mmp_header">
+    <div class="header_back">
+        <a href="#" class="icon-back">
+
+        </a>
+    </div>
+    <div class="down">
+        <img src="images/header_app.png" alt="">
+    </div>
+    <h1>凑单品</h1>
+</div>
+
+<div class="filter">
+    <div class="search">
+        <div class="icon-search"></div>
+    </div>
+    <ul  class="clearfix filters">
+        <li data_index="0">
+            <a href="#"><span shopid="0">京东</span>
+                <i></i>
+            </a>
+
+        </li>
+        <li data_index="1">
+            <a href="#"><span areaid="0">华北</span>
+                <i></i>
+            </a>
+
+        </li>
+        <li data_index="2">
+            <a href="#"><span>全部价格</span>
+                <i></i>
+            </a>
+
+        </li>
+    </ul>
+
+
+    <!--mall-->
+    <div class="mall filter_select">
+        <ul>
+            <li>
+                <a href="#">天猫</a>
+            </li>
+            <li>
+                <a href="#">一号店</a>
+            </li>
+            <li>
+                <a href="#">淘宝</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="city filter_select">
+        <ul>
+            <li>
+                <a href="#">天猫</a>
+            </li>
+            <li>
+                <a href="#">一号店</a>
+            </li>
+            <li>
+                <a href="#">淘宝</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="pirce filter_select">
+        <ul>
+            <li class="on">
+                <a href="#">所有价格</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="product_list">
+    <ul class="clearfix">
+        <li>
+            <a href="#">
+                <div class="pic">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg" alt="">
+                </div>
+                <p class="title">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+                <div class="info">
+                    <span class="pirce">¥0.50</span>
+                    <a class="gocoudan" href="#">去凑单</a>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="mon_footer"></div>
+</body>
+</html>
+
+
+<script type="text/template" id="temp_mall">
+    {{ each list as v }}
+
+        <li shopId="{{ v.shopId }}">
+            <a href="#">{{ v.shopName }}
+                <i></i>
+            </a>
+        </li>
+    {{ /each }}
+</script>
+
+
+
+<script type="text/template" id="temp_city">
+    {{ each list as v }}
+
+    <li areaId="{{ v.areaId }}">
+        <a href="#">{{ v.areaName }}</a>
+    </li>
+    {{ /each }}
+</script>
+
+
+<script type="text/template" id="temp_gsproduct">
+{{ each list as v }}
+    <li areaId="{{ v.areaId }}" shopId="{{ v.shopId }}">
+        <a href="?productId={{ v.productId }}">
+            <div class="pic">
+                <img src="{{ v.productImg }}" alt="">
+            </div>
+            <p class="title">{{ v.productName }}</p>
+            <div class="info">
+                <span class="pirce">{{ v.productPrice }}</span>
+                <a class="gocoudan" href="#">去凑单</a>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/gsproduct.js"></script>

@@ -1,0 +1,176 @@
+@import "adapter";
+@import "common/mon";
+
+.mon_header();
+.mon_footer();
+.mon_bijia();
+.mon_filter();
+
+.all_title {
+  background: #f3f3f3;
+  border-top:1px solid #c8c8c8; ;
+  border-bottom:1px solid #c8c8c8;
+  color: #874604;
+  h3 {
+    line-height:36/50rem;
+    font-size: 14/50rem;
+    text-indent: 10/50rem;
+  }
+
+}
+
+.brand_title {
+
+  li {
+    font-size: 0px;
+    padding:10/50rem;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+    background-image: url(../images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right center;
+    em {
+      background: #c9c9c9;
+      display: inline-block;
+      line-height:20/50rem;
+      width: 20/50rem;
+      height: 20/50rem;
+      font-size: 14/50rem;
+      text-align: center;
+      margin-right: 10/50rem;
+      vertical-align: top;
+      font-style: normal;
+      color: #fff;
+      &.top1 {
+        background-color: red;
+      }
+      &.top2 {
+        background: #ff9314;
+      }
+      &.top3 {
+        background: #8adf5b;
+      }
+    }
+    .info {
+      display: inline-block;
+      height: 100%;
+
+      h4 {
+        font-size: 16/50rem;
+        font-weight: 400;
+      }
+    }
+    .other {
+      margin-top: 3px;
+      color: #999;
+      font-size: 14/50rem;
+    }
+  }
+}
+
+
+.product_list {
+  li {
+    padding:14/50rem 8/50rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  a {
+    display: block;
+  }
+
+  .p_pic {
+    width:110/50rem;
+    //background-color: #f0ebe4;
+    float: left;
+    height:100/50rem;
+    overflow: hidden;
+
+    img {
+      width:100/50rem;
+      height:100/50rem;
+
+    }
+  }
+
+  .p_text {
+    font-size: 15/50rem;
+    padding-left: 90/50rem;
+
+    .p_title {
+      min-height:57/50rem;
+      font-size: 14/50rem;
+      font-weight: 400;
+    }
+
+    .p_pirce {
+      font-size: 18px;
+      color: #ea3900;
+      vertical-align: middle;
+      span {
+        float: right;
+      }
+    }
+
+    .p_info {
+      vertical-align: bottom;
+      font-size:12/50rem;
+      padding-top: 12/50rem;
+      color: #A1A1A3;
+      span:last-child {
+        padding:0 5/50rem;
+      }
+    }
+  }
+}
+
+
+.product_com {
+
+  .p_pic {
+    float: left;
+    margin-left: 10/50rem;
+  }
+  .tit {
+    color: #999999;
+    line-height: 22px;
+    font-size: 14px;
+    word-break: break-all;
+  }
+
+  .product_comcontent {
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    p {
+      font-size: 14px;
+      b {
+        font-weight: 400;
+      }
+
+      i {
+        color: #999999;
+        float: right;
+        font-style: normal;
+        font-size: 14px;
+      }
+    }
+
+    .nikename {
+      span {
+        float: right;
+      }
+    }
+
+    .con {
+      color: #000000;
+      margin-top: 10px;
+      line-height: 22px;
+      font-size: 15px;
+      word-break: break-all;
+      text-indent: 30px;
+    }
+  }
+}

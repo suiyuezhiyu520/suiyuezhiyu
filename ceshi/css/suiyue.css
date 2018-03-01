@@ -1,0 +1,15 @@
+.ib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+p {
+  color: green; }
+
+body {
+  font-size: 12px; }
+
+p {
+  background-color: #fff; }
+
+/*# sourceMappingURL=suiyue.css.map */

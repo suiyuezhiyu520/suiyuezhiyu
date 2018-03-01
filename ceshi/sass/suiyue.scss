@@ -1,0 +1,54 @@
+$lte7: true;
+$type: monster;
+.ib{
+  display:inline-block;
+  @if $lte7 {
+    *display:inline;
+    *zoom:1;
+}
+}
+p {
+  @if $type == ocean {
+    color: blue;
+} @else if $type == matador {
+          color: red;
+} @else if $type == monster {
+          color: green;
+} @else {
+  color: black;
+}
+}
+//
+////css style
+////-------------------------------
+//.ib{
+//  display:inline-block;
+//  *display:inline;
+//  *zoom:1;
+//}
+//p {
+//  color: green;
+//}
+
+
+
+@mixin suiyue($font-size : 12px){
+  font-size: $font-size;
+}
+
+body {
+  @include suiyue()
+
+}
+
+$color : #fff;
+
+$color : red !default;
+
+
+
+p {
+  background-color:$color;
+}
+
+

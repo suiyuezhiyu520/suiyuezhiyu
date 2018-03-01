@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+<body>
+<div class="mmp_header">
+    <div class="header_back">
+        <a href="#" class="icon-back">
+
+        </a>
+    </div>
+    <div class="down">
+        <img src="images/header_app.png" alt="">
+    </div>
+    <h1>国内折扣</h1>
+
+</div>
+
+<div class="incountry">
+    <ul class="clearfix">
+        <li>
+            <a href="#">
+                <div class="img">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="">
+                </div>
+                <h3 class="title">西域美农新疆特产五星和田红枣250g*2</h3>
+                <p class="pirce">19.8元(5件99元)</p>
+                <p class="mall"><span>京东商城</span> | <span>10-22 13:28</span></p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="mon_footer"></div>
+</body>
+</html>
+
+<script type="text/template" id="temp_inlanddiscount">
+    {{ each list as v }}
+    <li>
+        <a href="#">
+            <div class="img">
+                {{ #v.productImg }}
+            </div>
+            <h3 class="title">{{ v.productName }}</h3>
+            <p class="pirce">{{ v.productPrice }}</p>
+            <p class="mall"><span>{{ v.productFrom }}</span> | <span>{{ v.productTime }}</span></p>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/inlanddiscount.js"></script>

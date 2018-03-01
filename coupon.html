@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/getcoupon.css">
+</head>
+<body>
+<div class="mmp_header">
+    <div class="header_back">
+        <a href="#" class="icon-back">
+
+        </a>
+    </div>
+    <div class="down">
+        <img src="images/header_app.png" alt="">
+    </div>
+    <h1>优惠券</h1>
+
+</div>
+
+
+<div class="coupon">
+    <ul class="clearfix">
+        <li>
+            <a href="#">
+                <img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt="">
+                <br>
+                肯德基
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="mon_footer">
+
+</div>
+
+
+
+</body>
+</html>
+
+<script type="text/template" id="temp_coupon">
+{{ each list as v}}
+        <li couponId="{{ v.couponId }}">
+            <a href="{{v.couponLink}}?couponId={{v.couponId}}&couponTitle={{v.couponTitle}}">
+                <img src="{{ v.couponImg }}" alt="">
+                <br>
+                {{ v.couponTitle }}
+            </a>
+        </li>
+    {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/getcoupon.js"></script>
+

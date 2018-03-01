@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+<div class="mmp_header">
+    <div class="header_back">
+        <a href="#" class="icon-back">
+
+        </a>
+    </div>
+    <div class="down">
+        <img src="images/header_app.png" alt="">
+    </div>
+    <h1>白菜价-淘宝内部券</h1>
+
+</div>
+<div class="nav warp">
+    <ul>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+        <li>
+            <a href="#">全部全部</a>
+        </li>
+        <li>
+            <a href="#">全部</a>
+        </li>
+
+    </ul>
+    <div class="searchbtn">
+        <div class="icon-search"></div>
+    </div>
+</div>
+
+<div class="baicaijiaproduct">
+    <ul class="clearfix">
+        <li>
+            <a href="#">
+                <div class="pic">
+                    <img src="https://gd2.alicdn.com/imgextra/i2/2551982558/TB2H6XhamiJ.eBjSspiXXbqAFXa_!!2551982558.jpg_400x400.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="text">
+                        <div class="title">
+                            <span>[包邮]</span>
+                            双十一红包 今日开启
+                        </div>
+                        <div class="pr">
+                            <em>¥</em>
+                            0.0
+                            <del>¥0</del>
+                        </div>
+                    </div>
+                    <div class="o">
+                        <div class="bar">
+                            <i>
+                                <em></em>
+                            </i>
+                            <b></b>
+                        </div>
+                        <div class="b">
+                            <div class="q"></div>
+                            <div class="g"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="mon_footer"></div>
+</body>
+</html>
+
+<script type="text/template" id="temp_baicaijiatitle">
+{{ each list as v }}
+        <li titleId={{ v.titleId }}>
+            <a href="#">{{ v.title }}</a>
+        </li>
+    {{ /each }}
+</script>
+
+
+<script type="text/template" id="temp_baicaijiaproduct">
+
+{{ each list as v }}
+<li>
+    <a href="#">
+        <div class="pic">
+            {{ #v.productImg }}
+        </div>
+        <div class="info">
+            <div class="text">
+                <div class="title">
+                   {{ #v.productName }}
+                </div>
+                <div class="pr">
+                   {{ #v.productPrice }}
+                </div>
+            </div>
+            <div class="o">
+                <div class="bar">
+                    <!--<i>-->
+                        <!--<em></em>-->
+                    <!--</i>-->
+                    <!--<b>{{ #v.productCouponRemain }}</b>-->
+                    {{ #v.productCouponRemain }}
+                </div>
+                <div class="b">
+                    <div class="q">{{ #v.productCoupon }}</div>
+                    <div class="g">{{ #v.productHref }}</div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+    {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/baicaijia.js"></script>

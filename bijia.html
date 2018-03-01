@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bijia.css">
+</head>
+<body>
+<div class="container">
+    <div class="mon_header"></div>
+    <div class="mon_bijia"></div>
+    <div class="mon_filter">
+        <a href="#">首页</a>>
+        <a class="category" href="#">全部分类</a>>
+        <a class="product" href="#">坦克</a>>
+        <a class="filter_btn" href="#">筛选</a>
+    </div>
+    <div class="product_bijia">
+        <div class="p_name">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</div>
+        <div class="p_pic">
+            <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+        </div>
+        <div class="p_collect">
+            <a href="#">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="p_tab">
+        <ul>
+            <li class="cur">
+                <a href="#">比价购买</a>
+            </li>
+            <li class="middle">
+                <a href="#">产品参数</a>
+            </li>
+            <li class="">
+                <a href="#">评价(2322)</a>
+            </li>
+        </ul>
+    </div>
+    <div class="p_buy">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td class="p_icon">
+                        <a href="#">
+                            <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            京东商城
+                        </a>
+                    </td>
+                    <td class="red">
+                        <a href="#">
+                        ￥1999.00
+                        </a>
+                    </td>
+                    <td class="gobuy">
+                        <span href="#">去购买</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="notice">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </p>
+    </div>
+
+    <div class="p_comment">
+        <div class="p_comtitle">
+            网友评价
+        </div>
+        <div class="p_comlist">
+            <ul>
+                <li>
+                    <p class="clearfix">
+                        <span class="fl">b***r</span>
+                        <span class="fr">2016/10/1</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="fr">购买自：京东商城</span>
+                    </p>
+                    <p class="com_content">使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线</p>
+                </li>
+            </ul>
+            <div class="more">
+                <a href="#">
+                    查看更多评价
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mon_footer"></div>
+</div>
+</body>
+</html>
+
+<script type="text/template" id="temp_comment">
+{{ each list as v }}
+    <li>
+        <p class="clearfix">
+            <span class="fl">{{ v.comName }}</span>
+            <span class="fr">{{ v.comTime }}</span>
+        </p>
+        <p class="clearfix">
+            <span class="fr">{{ v.comFrom }}</span>
+        </p>
+        <p class="com_content">{{ v.comContent }}</p>
+    </li>
+{{ /each }}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/bijia.js"></script>

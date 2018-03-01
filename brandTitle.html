@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+<body>
+    <div class="mon_header"></div>
+    <div class="mon_bijia"></div>
+    <div class="mon_filter">
+        <a href="#">首页</a>>
+        <a href="#">全部分类</a>>
+        <!--<a class="category" href="#">坦克</a>>-->
+        <!--<a class="filter_btn" href="#">筛选</a>-->
+    </div>
+
+    <div class="hot">
+        热门品牌排行
+    </div>
+    <div class="brandtitle">
+        <ul>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+            <li>
+                <a href="#">平板电视十大品牌</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mon_footer"></div>
+</body>
+</html>
+
+<script type="text/template" id="temp_brandtitle">
+    {{ each list as v}}
+        <li>
+            <a href="brand.html?categoryId={{ v.categoryId }}&brandTitleId={{ v.brandTitleId }}">{{ v.brandTitle  }}</a>
+        </li>
+    {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/common/pagenation.js"></script>
+<script src="js/brandTitle.js"></script>
+
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+    <div class="container">
+        <!--头部-->
+        <div class="mmp_header">
+            <div class="logo">
+                <img src="images/header_logo.png" alt="">
+            </div>
+            <div class="down">
+                <img src="images/header_app.png" alt="">
+            </div>
+        </div>
+        <!--搜索-->
+        <div class="mmp_search">
+            <input type="text" class="text" placeholder="请输入你想比价的商品">
+            <input type="button" value="搜索" class="searchbtn">
+        </div>
+        <!--大菜单-->
+        <div class="cateMenu">
+            <ul class="category_title">
+                <li>
+                    <a href="#">大家电</a>
+                    <ol class="category clearfix">
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">手机数码</a>
+                    <ol class="category clearfix">
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <!--footer开始-->
+        <div class="footer">
+            <div class="footer_top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+
+            <div class="footer_bottom">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#"> 慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/template" id="temp_categorytitle">
+    {{ each list as v }}
+        <li data_titleid="{{ v.titleId }}">
+            <a href="#">{{ v.title }}</a>
+            <ol class="category clearfix">
+            </ol>
+        </li>
+    <li>
+    {{ /each }}
+</script>
+
+
+<script type="text/template" id="temp_category">
+    {{ each list as v}}
+        <li categoryId="{{ v.categoryId }}" titleId="{{ v.titleId }}">
+            <a href="#">{{ v.category }}</a>
+        </li>
+    {{ /each }}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/cookie/jquery.cookie.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/ajax.js"></script>
+<script src="js/category.js"></script>
